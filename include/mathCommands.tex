@@ -1,0 +1,29 @@
+% user commands
+\usepackage{xargs}
+\usepackage{ifthen}
+
+%----------> VARIABLES AND SYMBOLS.
+% write a tensor in bold form.
+\renewcommand{\vec}[1]{
+    \ensuremath{\mathbf{#1}}
+}
+% write gradient in bold form.
+\newcommand{\grad}{
+    \ensuremath{\mathbf{\nabla}}
+}
+
+%----------> BRACKETS.
+% enclose a term in round brackets.
+\newcommand{\robra}[1]{
+    \ensuremath{\left(#1\right)}
+}
+% enclose a term in square brackets.
+\newcommand{\sqbra}[1]{
+    \ensuremath{\left[#1\right]}
+}
+
+%----------> OPERATIONS.
+% derivative.
+\newcommandx{\der}[3][1=\partial, 2=t]{
+    \ensuremath{\frac{#1 #3}{#1 #2}}
+}
